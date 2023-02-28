@@ -1,22 +1,27 @@
 /*
-Propriedades enumeráveis de um objeto são propriedades que podem ser iteradas usando um loop `for...in`,
-ou acessadas usando o método `Object.keys()`.
+Os tipos de dados primitivos do JavaScript também são objetos e possuem métodos e propriedades próprios.
 
-Por padrão, todas as propriedades que são adicionadas a um objeto usando objetos literais são enumeráveis.
-
-No entanto, é possível criar propriedades não enumeráveis usando o método `Object.defineProperty()` com o descritor de propriedade `enumerable` definido como `false`.
-
-As propriedades não enumeráveis ainda podem ser acessadas usando a sintaxe regular de acesso à propriedade,
-mas elas não aparecerão nos resultados dos métodos de enumeração como `for...in` ou `Object.keys()`.
+Vejamos os métodos mais comuns do tipo string.
 */
 
-let obj = {
-	'enumerableProp': 'enumerável',
-};
+let str = "Olá, Mundo!";
 
-Object.defineProperty(obj, 'norEnumerableProp', {
-	value: 'não enumerável',
-	enumerable: false,
-});
+// Length: Retorna o núemro de caracteres da string.
+//console.log(str.length);
 
-console.log(Object.keys(obj));
+// toUpperCase: Torna todos os caracteres maiúsculos
+//console.log(str.toUpperCase());
+
+// toLowerCase: Torna todos os caracteres minúsculos.
+//console.log(str.toLowerCase());
+
+// concat: Junta duas ou mais strings.
+//console.log(str.concat(" Bom dia!", " Como vai?"));
+
+// slice: Extrai uma porção de uma string e retorna uma nova string.
+/*let part = str.slice(1, 5);
+console.log(part);*/
+
+// split: Converte uma string em um array a partir de um caractere separador.
+let strArr = str.split(",");
+console.log(strArr);
