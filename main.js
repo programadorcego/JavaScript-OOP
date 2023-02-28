@@ -1,26 +1,22 @@
 /*
-Há 3 formas nativas no JavaScript de se listar as propriedades de um objeto:
+Propriedades enumeráveis de um objeto são propriedades que podem ser iteradas usando um loop `for...in`,
+ou acessadas usando o método `Object.keys()`.
 
-1. Loop for ... in
-2. Object.keys(o)
-3. Object.getOwnPropertyNames(o)
+Por padrão, todas as propriedades que são adicionadas a um objeto usando objetos literais são enumeráveis.
+
+No entanto, é possível criar propriedades não enumeráveis usando o método `Object.defineProperty()` com o descritor de propriedade `enumerable` definido como `false`.
+
+As propriedades não enumeráveis ainda podem ser acessadas usando a sintaxe regular de acesso à propriedade,
+mas elas não aparecerão nos resultados dos métodos de enumeração como `for...in` ou `Object.keys()`.
 */
 
-let pessoa = {
-	"nome": "Willian",
-	"idade": 32,
-	falar(){
-		console.log(`${this.nome} está falando!`);
-	},
+let obj = {
+	'enumerableProp': 'enumerável',
 };
 
-// for...in
-/*for(propriedade in pessoa){
-	console.log(`${propriedade}: ${pessoa[propriedade]}`);
-}*/
+Object.defineProperty(obj, 'norEnumerableProp', {
+	value: 'não enumerável',
+	enumerable: false,
+});
 
-// Object.keys
-//console.log(Object.keys(pessoa));
-
-// Object.getOwnPropertyNames
-console.log(Object.getOwnPropertyNames(pessoa));
+console.log(Object.keys(obj));
