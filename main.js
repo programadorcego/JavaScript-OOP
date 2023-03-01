@@ -1,27 +1,33 @@
 /*
 Os tipos de dados primitivos do JavaScript também são objetos e possuem métodos e propriedades próprios.
 
-Vejamos os métodos mais comuns do tipo string.
+Vejamos os métodos mais comuns do tipo number.
 */
 
-let str = "Olá, Mundo!";
+let n = 9.85379203
 
-// Length: Retorna o núemro de caracteres da string.
-//console.log(str.length);
+// toString: converte um número para uma string
+//console.log(typeof n.toString());
 
-// toUpperCase: Torna todos os caracteres maiúsculos
-//console.log(str.toUpperCase());
+// toFixed: formata um número, especificando o número de dígitos a serem exibidos após o ponto decimal
+//console.log(n.toFixed(2));
 
-// toLowerCase: Torna todos os caracteres minúsculos.
-//console.log(str.toLowerCase());
+// toPrecision: formata um número para uma precisão especificada.
+//console.log(n.toPrecision(2));
 
-// concat: Junta duas ou mais strings.
-//console.log(str.concat(" Bom dia!", " Como vai?"));
+// Os métodos a seguir não são métodos do objeto number, mas métodos globais do JavaScript.
 
-// slice: Extrai uma porção de uma string e retorna uma nova string.
-/*let part = str.slice(1, 5);
-console.log(part);*/
+// Number: converte um valor para o tipo number.
+//console.log(Number(true));
+//console.log(Number(false));
+//console.log(typeof Number("10"));
+//console.log(Number("will"));
 
-// split: Converte uma string em um array a partir de um caractere separador.
-let strArr = str.split(",");
-console.log(strArr);
+// parseInt: converte um valor para o tipo inteiro.
+//console.log(parseInt("10.5"));
+
+// parseFloat: converte um número para o tipo float.
+let n1 = "1,50";
+let n2 = "2,50";
+let r = parseFloat(n1.replace(",", ".")) + parseFloat(n2.replace(",", "."));
+console.log(r.toFixed(2).toString().replace(".", ","));
