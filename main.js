@@ -1,33 +1,42 @@
 /*
 Os tipos de dados primitivos do JavaScript também são objetos e possuem métodos e propriedades próprios.
 
-Vejamos os métodos mais comuns do tipo number.
+Vejamos os métodos mais comuns do tipo array.
 */
 
-let n = 9.85379203
+let frutas = ["laranja", "maçã", "morango", "abacaxi"];
 
-// toString: converte um número para uma string
-//console.log(typeof n.toString());
+// length: exibe a quantidade de itens no array.
+//console.log(frutas.length);
 
-// toFixed: formata um número, especificando o número de dígitos a serem exibidos após o ponto decimal
-//console.log(n.toFixed(2));
+// toString: Converte um array para uma string com elementos separados por vírgula.
+//console.log(frutas.toString());
 
-// toPrecision: formata um número para uma precisão especificada.
-//console.log(n.toPrecision(2));
+// pop: Remove o último item do array.
+/*frutas.pop();
+console.log(frutas);*/
 
-// Os métodos a seguir não são métodos do objeto number, mas métodos globais do JavaScript.
+// push: adiciona um ou mais itens no final do array.
+/*frutas.push("banana", "goiaba");
+console.log(frutas);*/
 
-// Number: converte um valor para o tipo number.
-//console.log(Number(true));
-//console.log(Number(false));
-//console.log(typeof Number("10"));
-//console.log(Number("will"));
+// shift: remove o primeiro item do array.
+/*frutas.shift();
+console.log(frutas);*/
 
-// parseInt: converte um valor para o tipo inteiro.
-//console.log(parseInt("10.5"));
+// unshift: adiciona um ou mais itens ao array.
+/*frutas.unshift("banana", "goiaba");
+console.log(frutas);*/
 
-// parseFloat: converte um número para o tipo float.
-let n1 = "1,50";
-let n2 = "2,50";
-let r = parseFloat(n1.replace(",", ".")) + parseFloat(n2.replace(",", "."));
-console.log(r.toFixed(2).toString().replace(".", ","));
+// concat: junta dois ou mais arrays.
+/*frutas2 = ["uva", "melancia", "manga"];
+frutas = frutas.concat(frutas2);
+console.log(frutas);*/
+
+// splice: adiciona ou remove um item de um array a partir de um index.
+/*frutas.splice(1, 2, "manga");
+console.log(frutas);*/
+
+// slice: retorna um novo array com uma porção do array original.
+frutas2 = frutas.slice(1);
+console.log(frutas2);
