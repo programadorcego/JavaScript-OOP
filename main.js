@@ -1,8 +1,8 @@
 /*
-O método `.map()` cria um novo array
-a partir da chamada de uma função para cada elemento do array.
+O método `.forEach()` executa uma função em cada elemento do array,
+no entanto, não retorna um novo array.
 
-array.map(function(currentValue, index, arr))
+array.forEach(function(currentValue, index, arr))
 
 1: function() - Obrigatório. É a função que executará em cada elemento.
 2. currentValue: Obrigatório - o valor do elemento atual.
@@ -10,10 +10,13 @@ array.map(function(currentValue, index, arr))
 4. arr: opcional. O array do elemento atual.
 */
 
-/*let numbers = [1, 2, 3, 4, 5];
-let sqrNumbers = numbers.map(n => n ** 2);
-console.log(sqrNumbers);*/
+let numbers = [1, 2, 3, 4, 5];
+//numbers.forEach(n => console.log(n));
 
-let words = ['olá', 'mundo', 'como', 'você', 'está'];
-let upperWords = words.map(word => word.toUpperCase());
-console.log(upperWords);
+/*let soma = 0;
+numbers.forEach(n => soma += n);
+console.log(soma);*/
+
+let fatorial = 1;
+numbers.forEach(n => fatorial *= n);
+console.log(fatorial);
