@@ -1,22 +1,21 @@
 /*
-O método `.forEach()` executa uma função em cada elemento do array,
-no entanto, não retorna um novo array.
+O método `.reduce()` executa uma função em cada elemento do array,
+e então reduz o array a um único valor.
 
-array.forEach(function(currentValue, index, arr))
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
 1: function() - Obrigatório. É a função que executará em cada elemento.
-2. currentValue: Obrigatório - o valor do elemento atual.
-3. index: Opcional - o índice do elemento atual.
-4. arr: opcional. O array do elemento atual.
+2. total - Obrigatório. O initialValue ou o valor retornado anteriormente da função.
+3. currentValue - Obrigatório. O valor do elemento atual.
+4. currentIndex - Opcional. O índice do elemento atual.
+5. arr - Opcional. O array ao qual o elemento atual pertence.
+6. initialValue - Opcional. Um valor a ser passado para a função como valor inicial.
 */
 
-let numbers = [1, 2, 3, 4, 5];
-//numbers.forEach(n => console.log(n));
-
-/*let soma = 0;
-numbers.forEach(n => soma += n);
+/*let numeros = [1, 2, 3, 4, 5];
+let soma = numeros.reduce((total, n) => total + n, 0);
 console.log(soma);*/
 
-let fatorial = 1;
-numbers.forEach(n => fatorial *= n);
-console.log(fatorial);
+let palavras = ['Olá, ', 'mundo! ', 'Como ', 'você ', 'está?'];
+let concatenado = palavras.reduce((total, p) => total + p);
+console.log(concatenado);
