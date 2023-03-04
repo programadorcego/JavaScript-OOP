@@ -1,21 +1,24 @@
 /*
-O método `.reduce()` executa uma função em cada elemento do array,
-e então reduz o array a um único valor.
+O método `.filter()` crie um novo array preenchido com elementos que passam em um teste fornecido por uma função.
 
-array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+array.filter(function(currentValue, index, arr))
 
 1: function() - Obrigatório. É a função que executará em cada elemento.
-2. total - Obrigatório. O initialValue ou o valor retornado anteriormente da função.
-3. currentValue - Obrigatório. O valor do elemento atual.
-4. currentIndex - Opcional. O índice do elemento atual.
-5. arr - Opcional. O array ao qual o elemento atual pertence.
-6. initialValue - Opcional. Um valor a ser passado para a função como valor inicial.
+2. currentValue: Obrigatório - o valor do elemento atual.
+3. index: Opcional - o índice do elemento atual.
+4. arr: opcional. O array do elemento atual.
 */
 
-/*let numeros = [1, 2, 3, 4, 5];
-let soma = numeros.reduce((total, n) => total + n, 0);
-console.log(soma);*/
+/*let numeros = [1,2, 3, 4, 5, 6, 7, 8, 9, 10];
+let pares = numeros.filter(n => n % 2 == 0);
+console.log(pares);*/
 
-let palavras = ['Olá, ', 'mundo! ', 'Como ', 'você ', 'está?'];
-let concatenado = palavras.reduce((total, p) => total + p);
-console.log(concatenado);
+let produtos = [
+{nome: "maçã", categoria: "fruta"},
+{nome: "cenoura", categoria: "vegetal"},
+{nome: "manga", categoria: "fruta"},
+{nome: "alface", categoria: "vegetal"},
+];
+
+let frutas = produtos.filter(p => p.categoria === "fruta");
+console.log(frutas);
