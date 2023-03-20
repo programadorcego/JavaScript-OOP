@@ -1,14 +1,18 @@
 /*
-O método `includes()` é usado para verificar se um array contém um determinado elemento e retorna um valor booleano.
+O método `sort()` é usado para ordenar os elementos de um array e retorna o array ordenado.
+A ordem de classificação padrão é baseada em pontos de código Unicode de cadeia de caracteres, o que significa que o método de classificação classifica os elementos em ordem alfabética por padrão.
 
-array.includes(element, start)
+array.sort(compareFunction)
 
-1: element - Obrigatório. É o valor a ser buscado.
-2. start: Opcional - é a posição inicial. Por padrão é 0.
+1: compareFunction - Opcional. Uma função que define uma ordem de classificação.
+A função deve retornar um valor negativo, zero ou positivo, dependendo dos argumentos.
 */
 
-/*const numeros = [1, 2, '3', 4, 5];
-console.log(numeros.includes(3));*/
+/*const frutas = ['banana', 'maçã', 'laranja', 'abacaxi'];
+frutas.sort();
+frutas.reverse();
+console.log(frutas);*/
 
-const frutas = ['maçã', 'banana', 'manga', 'laranja'];
-console.log(frutas.includes('Laranja'));
+const numeros = [5, 9, 2, 7, 1];
+numeros.sort((a, b) => a - b);
+console.log(numeros);
