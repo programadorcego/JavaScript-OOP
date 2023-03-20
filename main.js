@@ -1,24 +1,14 @@
 /*
-O método `.filter()` crie um novo array preenchido com elementos que passam em um teste fornecido por uma função.
+O método `includes()` é usado para verificar se um array contém um determinado elemento e retorna um valor booleano.
 
-array.filter(function(currentValue, index, arr))
+array.includes(element, start)
 
-1: function() - Obrigatório. É a função que executará em cada elemento.
-2. currentValue: Obrigatório - o valor do elemento atual.
-3. index: Opcional - o índice do elemento atual.
-4. arr: opcional. O array do elemento atual.
+1: element - Obrigatório. É o valor a ser buscado.
+2. start: Opcional - é a posição inicial. Por padrão é 0.
 */
 
-/*let numeros = [1,2, 3, 4, 5, 6, 7, 8, 9, 10];
-let pares = numeros.filter(n => n % 2 == 0);
-console.log(pares);*/
+/*const numeros = [1, 2, '3', 4, 5];
+console.log(numeros.includes(3));*/
 
-let produtos = [
-{nome: "maçã", categoria: "fruta"},
-{nome: "cenoura", categoria: "vegetal"},
-{nome: "manga", categoria: "fruta"},
-{nome: "alface", categoria: "vegetal"},
-];
-
-let frutas = produtos.filter(p => p.categoria === "fruta");
-console.log(frutas);
+const frutas = ['maçã', 'banana', 'manga', 'laranja'];
+console.log(frutas.includes('Laranja'));
