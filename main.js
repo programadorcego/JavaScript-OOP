@@ -1,18 +1,23 @@
 /*
-O método `sort()` é usado para ordenar os elementos de um array e retorna o array ordenado.
-A ordem de classificação padrão é baseada em pontos de código Unicode de cadeia de caracteres, o que significa que o método de classificação classifica os elementos em ordem alfabética por padrão.
-
-array.sort(compareFunction)
-
-1: compareFunction - Opcional. Uma função que define uma ordem de classificação.
-A função deve retornar um valor negativo, zero ou positivo, dependendo dos argumentos.
+Escreva uma função que receba um array de objetos como parâmetro com uma propriedade "nome" e retorna um array apenas com os nomes em ordem alfabética.
 */
 
-/*const frutas = ['banana', 'maçã', 'laranja', 'abacaxi'];
-frutas.sort();
-frutas.reverse();
-console.log(frutas);*/
+const pessoas = [
+  { nome: "João", idade: 25 },
+  { nome: "Maria", idade: 30 },
+  { nome: "Pedro", idade: 40 },
+  { nome: "Ana", idade: 20 },
+  { nome: "Lucas", idade: 27 },
+  { nome: "Bianca", idade: 18 },
+  { nome: "Rafael", idade: 35 },
+  { nome: "Julia", idade: 22 },
+  { nome: "Eduardo", idade: 42 },
+  { nome: "Mariana", idade: 29 }
+];
 
-const numeros = [5, 9, 2, 7, 1];
-numeros.sort((a, b) => a - b);
-console.log(numeros);
+function ordenarNomes(arr)
+{
+	return arr.map(obj => obj.nome).sort();
+}
+
+console.log(ordenarNomes(pessoas));
