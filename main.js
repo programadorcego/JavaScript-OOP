@@ -1,23 +1,16 @@
 /*
-Escreva uma função que receba um array de objetos como parâmetro com uma propriedade "nome" e retorna um array apenas com os nomes em ordem alfabética.
+Escreva uma função que receba um array de números como parâmetro e retorne um objeto com a soma e a média de todos os números.
 */
 
-const pessoas = [
-  { nome: "João", idade: 25 },
-  { nome: "Maria", idade: 30 },
-  { nome: "Pedro", idade: 40 },
-  { nome: "Ana", idade: 20 },
-  { nome: "Lucas", idade: 27 },
-  { nome: "Bianca", idade: 18 },
-  { nome: "Rafael", idade: 35 },
-  { nome: "Julia", idade: 22 },
-  { nome: "Eduardo", idade: 42 },
-  { nome: "Mariana", idade: 29 }
-];
 
-function ordenarNomes(arr)
+const numeros = [1, 2, 3, 4, 5, 6];
+
+function obterSomaMedia(arr)
 {
-	return arr.map(obj => obj.nome).sort();
+	const soma = arr.reduce((total, n) => total + n);
+	const media = soma / arr.length;
+	
+	return {soma, media};
 }
 
-console.log(ordenarNomes(pessoas));
+console.log(obterSomaMedia(numeros));
