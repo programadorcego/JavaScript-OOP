@@ -1,64 +1,27 @@
 /*
-Crie um array de objetos representando livros, com cada objeto contendo as propriedades `título`, `autor` e `ano`.
-Use o método `map` para criar um novo array contendo apenas os títulos dos livros.
-Em seguida, use o método `filter` para criar outro array contendo apenas os livros publicados após 1990.
+Crie um objeto chamado carrinho_de_compras com as propriedades itens (um array) e precoTotal.
+Preencha o array itens com objetos representando itens no carrinho de compras, com cada objeto contendo as propriedades nome e preco.
+Use um loop forEach para exibir cada nome de item e preço no console.
+Em seguida, use reduce para calcular o preço total de todos os itens no carrinho de compras.
 */
 
-const livros = [
-  {
-    titulo: 'Harry Potter e a Pedra Filosofal',
-    autor: 'J.K. Rowling',
-    ano: 1997
-  },
-  {
-    titulo: 'O Senhor dos Anéis: A Sociedade do Anel',
-    autor: 'J.R.R. Tolkien',
-    ano: 1954
-  },
-  {
-    titulo: 'A Menina que Roubava Livros',
-    autor: 'Markus Zusak',
-    ano: 2005
-  },
-  {
-    titulo: '1984',
-    autor: 'George Orwell',
-    ano: 1949
-  },
-  {
-    titulo: 'Orgulho e Preconceito',
-    autor: 'Jane Austen',
-    ano: 1813
-  },
-  {
-    titulo: 'Cem Anos de Solidão',
-    autor: 'Gabriel Garcia Marquez',
-    ano: 1967
-  },
-  {
-    titulo: 'A Insustentável Leveza do Ser',
-    autor: 'Milan Kundera',
-    ano: 1984
-  },
-  {
-    titulo: 'A Revolução dos Bichos',
-    autor: 'George Orwell',
-    ano: 1945
-  },
-  {
-    titulo: 'O Grande Gatsby',
-    autor: 'F. Scott Fitzgerald',
-    ano: 1925
-  },
-  {
-    titulo: 'As Aventuras de Huckleberry Finn',
-    autor: 'Mark Twain',
-    ano: 1884
-  }
-];
+const carrinho_de_compras = {
+  itens: [
+    { nome: 'Camiseta Branca', preco: 39.90 },
+    { nome: 'Calça Jeans', preco: 129.90 },
+    { nome: 'Tênis Esportivo', preco: 259.90 },
+    { nome: 'Jaqueta de Couro', preco: 599.90 },
+    { nome: 'Óculos de Sol', preco: 189.90 },
+    { nome: 'Relógio de Pulso', preco: 799.90 },
+    { nome: 'Bolsa de Couro', preco: 349.90 },
+    { nome: 'Fones de Ouvido Sem Fio', preco: 199.90 },
+    { nome: 'Smartwatch', preco: 899.90 },
+    { nome: 'Notebook', preco: 4599.90 },
+  ],
+  precoTotal: 0,
+};
 
-const livros_nome = livros.map(l => l.titulo);
-//console.log(livros_nome);
+carrinho_de_compras.itens.forEach(item => console.log(`Nome: ${item.nome} Preço: ${item.preco}`));
 
-const livros_90 = livros.filter(l => l.ano >= 1990);
-console.log(livros_90);
+carrinho_de_compras.precoTotal = carrinho_de_compras.itens.reduce((total, item) => total + item.preco, carrinho_de_compras.precoTotal);
+console.log(carrinho_de_compras.precoTotal);
