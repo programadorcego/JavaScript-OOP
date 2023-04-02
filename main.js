@@ -1,14 +1,9 @@
 /*
-O objeto Math do JavaScript permite que você execute tarefas matemáticas em números.
+Os módulos no JavaScript permitem que você divida seu código em arquivos separados.
+Isso facilita a manutenção de uma base de código.
+Os módulos são importados de arquivos externos com a instrução import.
 */
 
-// console.log(Math.PI);
+import soma from "./soma.js";
 
-// console.log(Math.sqrt(16));
-
-let numero = 3.2;
-
-//console.log(Math.round(numero));
-//console.log(Math.ceil(numero));
-//console.log(Math.floor(numero));
-console.log(Math.trunc(numero));
+console.log(soma(3, 2));
