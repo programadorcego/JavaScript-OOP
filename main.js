@@ -4,6 +4,6 @@ Isso facilita a manutenção de uma base de código.
 Os módulos são importados de arquivos externos com a instrução import.
 */
 
-import soma from "./soma.js";
+import {soma, subtracao, multiplicacao, divisao} from "./matematica.js";
 
 console.log(soma(3, 2));
