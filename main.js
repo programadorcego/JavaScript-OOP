@@ -1,9 +1,19 @@
 /*
-Os módulos no JavaScript permitem que você divida seu código em arquivos separados.
-Isso facilita a manutenção de uma base de código.
-Os módulos são importados de arquivos externos com a instrução import.
+Classes são modelos de códigos para criar objetos.
+No JavaScript,criamos uma classe com a palavra reservada class. 
 */
 
-import {soma, subtracao, multiplicacao, divisao} from "./matematica.js";
+class Pessoa {
+	constructor(nome, sobrenome, idade){
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.idade = idade;
+	}
+	
+	cumprimentar(){
+		return `Meu nome é ${this.nome} ${this.sobrenome} e tenho ${this.idade} anos`;
+	}
+}
 
-console.log(soma(3, 2));
+const p1 = new Pessoa("Willian", "Pereira", 32)
+console.log(p1.cumprimentar());
