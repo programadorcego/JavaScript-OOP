@@ -1,15 +1,15 @@
 class Pessoa {
 	#nome;
 	
-	constructor(nome){
-		this.#nome = nome;
+	get nome(){
+		return this.#nome;
 	}
 	
-	cumprimentar()
-	{
-		console.log(`Olá, meu nome é ${this.#nome}`);
+	set nome(valor){
+		this.#nome = valor;
 	}
 }
 
-const pessoa = new Pessoa("Willian");
-pessoa.cumprimentar();
+let pessoa = new Pessoa;
+pessoa.nome = "Willian";
+console.log(pessoa.nome);
